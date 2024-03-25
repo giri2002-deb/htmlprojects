@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="speech/spe.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Text to speech</h1>
+        
+<textarea name="" id="text" ></textarea>
+<button onclick="spe()">Speech</button>
+
+</div>
+<script>
+    var speech=new SpeechSynthesisUtterance();
+function spe(){
+    speech.text=text.value;
+    speech.volume=1;
+    speech.rate=1;
+    speech.pitch=1;
+    window.speechSynthesis.speak(speech);
+}
+    </script>
+</body>
+</html>
